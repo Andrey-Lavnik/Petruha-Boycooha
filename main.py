@@ -8,8 +8,13 @@ fps = 60
 screen_width = 1200
 screen_height = 710
 
+IsJump = False
+JumpCount = 10
+
 x = 50
-y= 50
+y = 50
+x2 = 912
+y2 = 50
 speed = 5
 
 screen = pygame.display.set_mode((screen_width,screen_height))
@@ -22,6 +27,7 @@ obrez = pygame.image.load('assets/platforms/obrez.png')
 obrez2 = pygame.image.load('assets/platforms/obrez2.png')
 block = pygame.image.load('assets/platforms/block1.png')
 block = pygame.image.load('assets/platforms/block2.png')
+player2_stay = pygame.image.load("assets/enemy/en1_stay.png")
 
 #define variables
 
@@ -38,8 +44,20 @@ class Calculations():
         self.ticks = pygame.time.get_ticks()
         self.sekundomer += self.ticks // 1000
 
-class Player(pygame.sprite.Sprite):
-    right = True
+class Player2(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = 0
+
+
+    def flip(self):
+      self.image = pygame.transform.flip(player2_stay, True, False)
+
+    def update(self):
+        self.image.update()
+
+
+
 
 
 run = True
@@ -47,13 +65,13 @@ while run:
 
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_LEFT] and x > 1:
+    if keys[pygame.K_a] and x > 1:
         x -= speed
-    elif keys[pygame.K_RIGHT] and x < 962:
+    if keys[pygame.K_d] and x < 962:
         x += speed
-    elif keys[pygame.K_UP] and y > 1:
+    if keys[pygame.K_w] and y > 1:
         y -= speed
-    elif keys[pygame.K_DOWN] and y < 470:
+    if keys[pygame.K_s] and y < 470:
         y += speed
 
     #fps
@@ -61,13 +79,13 @@ while run:
 
     screen.blit(background,(0,0))
     screen.blit(player_stay, (x, y))
-
+    screen.blit(Player2, (x2, y2))
+    pygame.display.update()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
 
-    pygame.display.update()
 
 pygame.quit()
 
