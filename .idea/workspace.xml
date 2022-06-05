@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04aee6f0-a98c-47e7-8408-1b734705b298" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/assets/enemy/en1_hit1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/enemy/en1_hit1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/enemy/en1_hit2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/enemy/en1_hit2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/enemy/en1_hit4.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/enemy/en1_hit4.png" afterDir="false" />
@@ -19,6 +20,8 @@
       <change beforePath="$PROJECT_DIR$/assets/enemy/en1_walk5.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/enemy/en1_walk5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/enemy/en1_walk6.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/enemy/en1_walk6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
